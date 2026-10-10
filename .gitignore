@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment Variables & Secrets
+.env
+*.pem
+*.key
+
+# Data Files & Heavy Model Artifacts
+models/baselines/*.joblib
+models/xlmr/
+data/raw/
+*.xlsx
+*.csv
+*.tsv
+data/processed/*.csv
+
+# Output logs
+logs/
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+scratch/

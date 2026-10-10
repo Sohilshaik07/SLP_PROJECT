@@ -1,0 +1,112 @@
+{
+  "model": "XLM-RoBERTa Base (UNIFIED_XLMR_best)",
+  "dataset": "unified_code_mixed_multilingual",
+  "split": "test",
+  "n_samples": 6319,
+  "accuracy": 0.8486,
+  "macro_precision": 0.7924,
+  "macro_recall": 0.7941,
+  "macro_f1": 0.7933,
+  "weighted_f1": 0.8488,
+  "roc_auc": 0.8989,
+  "confusion_matrix": [
+    [
+      4315,
+      485
+    ],
+    [
+      472,
+      1047
+    ]
+  ],
+  "confusion_matrix_dict": {
+    "TN": 4315,
+    "FP": 485,
+    "FN": 472,
+    "TP": 1047
+  },
+  "evaluation_metadata": {
+    "evaluation_type": "actual_model_inference_verified",
+    "model_path": "models/xlmr/UNIFIED_XLMR_best",
+    "test_path": "data/processed/unified/test.csv",
+    "device": "cpu",
+    "inference_duration_seconds": 516.77,
+    "timestamp": "2026-10-05 06:37:02 UTC",
+    "synthetic_or_mock": false,
+    "verified_by": "Scientific Test Verification Phase 1"
+  },
+  "per_language": {
+    "Hindi": {
+      "n_samples": 490,
+      "accuracy": 0.7367,
+      "macro_precision": 0.7374,
+      "macro_recall": 0.7356,
+      "macro_f1": 0.7358,
+      "roc_auc": 0.8222,
+      "confusion_matrix": [
+        [
+          166,
+          72
+        ],
+        [
+          57,
+          195
+        ]
+      ]
+    },
+    "Malayalam": {
+      "n_samples": 1261,
+      "accuracy": 0.9548,
+      "macro_precision": 0.6884,
+      "macro_recall": 0.6409,
+      "macro_f1": 0.6607,
+      "roc_auc": 0.8822,
+      "confusion_matrix": [
+        [
+          1189,
+          22
+        ],
+        [
+          35,
+          15
+        ]
+      ]
+    },
+    "Tamil": {
+      "n_samples": 4174,
+      "accuracy": 0.8368,
+      "macro_precision": 0.7802,
+      "macro_recall": 0.7782,
+      "macro_f1": 0.7792,
+      "roc_auc": 0.8857,
+      "confusion_matrix": [
+        [
+          2813,
+          335
+        ],
+        [
+          346,
+          680
+        ]
+      ]
+    },
+    "Telugu": {
+      "n_samples": 394,
+      "accuracy": 0.7716,
+      "macro_precision": 0.7746,
+      "macro_recall": 0.7731,
+      "macro_f1": 0.7714,
+      "roc_auc": 0.8234,
+      "confusion_matrix": [
+        [
+          147,
+          56
+        ],
+        [
+          34,
+          157
+        ]
+      ]
+    }
+  }
+}

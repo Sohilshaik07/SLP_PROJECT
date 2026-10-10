@@ -1,0 +1,133 @@
+{
+  "model": "TF-IDF + Logistic Regression (UNIFIED_tfidf_lr.joblib)",
+  "dataset": "unified_code_mixed_multilingual",
+  "split": "test",
+  "n_samples": 6319,
+  "accuracy": 0.8202,
+  "macro_precision": 0.7596,
+  "macro_recall": 0.8063,
+  "macro_f1": 0.7757,
+  "weighted_f1": 0.8276,
+  "roc_auc": 0.8924,
+  "confusion_matrix": [
+    [
+      3999,
+      801
+    ],
+    [
+      335,
+      1184
+    ]
+  ],
+  "confusion_matrix_dict": {
+    "TN": 3999,
+    "FP": 801,
+    "FN": 335,
+    "TP": 1184
+  },
+  "per_language": {
+    "Hindi": {
+      "n_samples": 490,
+      "accuracy": 0.6796,
+      "macro_precision": 0.7545,
+      "macro_recall": 0.6716,
+      "macro_f1": 0.6479,
+      "roc_auc": 0.8144,
+      "confusion_matrix": [
+        [
+          93,
+          145
+        ],
+        [
+          12,
+          240
+        ]
+      ],
+      "confusion_matrix_dict": {
+        "TN": 93,
+        "FP": 145,
+        "FN": 12,
+        "TP": 240
+      }
+    },
+    "Malayalam": {
+      "n_samples": 1261,
+      "accuracy": 0.95,
+      "macro_precision": 0.6789,
+      "macro_recall": 0.696,
+      "macro_f1": 0.687,
+      "roc_auc": 0.8502,
+      "confusion_matrix": [
+        [
+          1177,
+          34
+        ],
+        [
+          29,
+          21
+        ]
+      ],
+      "confusion_matrix_dict": {
+        "TN": 1177,
+        "FP": 34,
+        "FN": 29,
+        "TP": 21
+      }
+    },
+    "Tamil": {
+      "n_samples": 4174,
+      "accuracy": 0.8076,
+      "macro_precision": 0.7468,
+      "macro_recall": 0.7851,
+      "macro_f1": 0.7605,
+      "roc_auc": 0.8776,
+      "confusion_matrix": [
+        [
+          2611,
+          537
+        ],
+        [
+          266,
+          760
+        ]
+      ],
+      "confusion_matrix_dict": {
+        "TN": 2611,
+        "FP": 537,
+        "FN": 266,
+        "TP": 760
+      }
+    },
+    "Telugu": {
+      "n_samples": 394,
+      "accuracy": 0.7132,
+      "macro_precision": 0.7327,
+      "macro_recall": 0.7173,
+      "macro_f1": 0.7094,
+      "roc_auc": 0.8099,
+      "confusion_matrix": [
+        [
+          118,
+          85
+        ],
+        [
+          28,
+          163
+        ]
+      ],
+      "confusion_matrix_dict": {
+        "TN": 118,
+        "FP": 85,
+        "FN": 28,
+        "TP": 163
+      }
+    }
+  },
+  "metadata": {
+    "evaluation_type": "actual_model_inference_verified",
+    "model_path": "models/baselines/UNIFIED_tfidf_lr.joblib",
+    "test_path": "data/processed/unified/test.csv",
+    "timestamp": "2026-10-05 06:42:55 UTC",
+    "synthetic_or_mock": false
+  }
+}

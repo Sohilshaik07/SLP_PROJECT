@@ -1,0 +1,3991 @@
+{
+  "experiment": "Phase 3E — Faithfulness Evaluation",
+  "model_path": "C:\\Users\\SKSOH\\OneDrive\\Desktop\\SLP_PROJECT\\models\\xlmr\\UNIFIED_XLMR_best",
+  "test_csv": "C:\\Users\\SKSOH\\OneDrive\\Desktop\\SLP_PROJECT\\data\\processed\\unified\\test.csv",
+  "sample_seed": 99,
+  "sample_count": 20,
+  "shap_max_evals": 250,
+  "lime_num_samples": 200,
+  "random_seed_base": 77,
+  "k_values": [
+    1,
+    3,
+    5
+  ],
+  "bootstrap_n": 1000,
+  "bootstrap_seed": 42,
+  "phase3b_overlap": 0,
+  "summary": [
+    {
+      "method": "SHAP",
+      "k": 1,
+      "n_samples": 20,
+      "mean_prob_drop": 0.119956,
+      "median_prob_drop": 0.002479,
+      "mean_abs_change": 0.130037,
+      "frac_decreased": 0.8,
+      "bootstrap_95ci_lo": 0.01353,
+      "bootstrap_95ci_hi": 0.245189
+    },
+    {
+      "method": "SHAP",
+      "k": 3,
+      "n_samples": 20,
+      "mean_prob_drop": 0.161742,
+      "median_prob_drop": 0.00624,
+      "mean_abs_change": 0.182488,
+      "frac_decreased": 0.7,
+      "bootstrap_95ci_lo": 0.045114,
+      "bootstrap_95ci_hi": 0.312402
+    },
+    {
+      "method": "SHAP",
+      "k": 5,
+      "n_samples": 20,
+      "mean_prob_drop": 0.206891,
+      "median_prob_drop": 0.02941,
+      "mean_abs_change": 0.217776,
+      "frac_decreased": 0.9,
+      "bootstrap_95ci_lo": 0.08341,
+      "bootstrap_95ci_hi": 0.350846
+    },
+    {
+      "method": "LIME",
+      "k": 1,
+      "n_samples": 20,
+      "mean_prob_drop": 0.132326,
+      "median_prob_drop": 0.00454,
+      "mean_abs_change": 0.138762,
+      "frac_decreased": 0.8,
+      "bootstrap_95ci_lo": 0.036144,
+      "bootstrap_95ci_hi": 0.257975
+    },
+    {
+      "method": "LIME",
+      "k": 3,
+      "n_samples": 20,
+      "mean_prob_drop": 0.211483,
+      "median_prob_drop": 0.034198,
+      "mean_abs_change": 0.223575,
+      "frac_decreased": 0.75,
+      "bootstrap_95ci_lo": 0.074546,
+      "bootstrap_95ci_hi": 0.371196
+    },
+    {
+      "method": "LIME",
+      "k": 5,
+      "n_samples": 20,
+      "mean_prob_drop": 0.266782,
+      "median_prob_drop": 0.017273,
+      "mean_abs_change": 0.276285,
+      "frac_decreased": 0.85,
+      "bootstrap_95ci_lo": 0.11625,
+      "bootstrap_95ci_hi": 0.43783
+    },
+    {
+      "method": "RANDOM",
+      "k": 1,
+      "n_samples": 20,
+      "mean_prob_drop": 0.03548,
+      "median_prob_drop": 3.9e-05,
+      "mean_abs_change": 0.054933,
+      "frac_decreased": 0.5,
+      "bootstrap_95ci_lo": -0.014208,
+      "bootstrap_95ci_hi": 0.124587
+    },
+    {
+      "method": "RANDOM",
+      "k": 3,
+      "n_samples": 20,
+      "mean_prob_drop": 0.014775,
+      "median_prob_drop": 0.000754,
+      "mean_abs_change": 0.034127,
+      "frac_decreased": 0.65,
+      "bootstrap_95ci_lo": -0.010498,
+      "bootstrap_95ci_hi": 0.044707
+    },
+    {
+      "method": "RANDOM",
+      "k": 5,
+      "n_samples": 20,
+      "mean_prob_drop": 0.132739,
+      "median_prob_drop": 0.000509,
+      "mean_abs_change": 0.15682,
+      "frac_decreased": 0.7,
+      "bootstrap_95ci_lo": 0.006865,
+      "bootstrap_95ci_hi": 0.278894
+    }
+  ],
+  "advantage": [
+    {
+      "method": "SHAP",
+      "k": 1,
+      "advantage_over_random": 0.084476
+    },
+    {
+      "method": "SHAP",
+      "k": 3,
+      "advantage_over_random": 0.146967
+    },
+    {
+      "method": "SHAP",
+      "k": 5,
+      "advantage_over_random": 0.074153
+    },
+    {
+      "method": "LIME",
+      "k": 1,
+      "advantage_over_random": 0.096846
+    },
+    {
+      "method": "LIME",
+      "k": 3,
+      "advantage_over_random": 0.196708
+    },
+    {
+      "method": "LIME",
+      "k": 5,
+      "advantage_over_random": 0.134043
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": 0,
+      "text": "మీరు ఇండియా ను గౌరవించడం మంచిది.జై శ్రీరాం",
+      "language": "Telugu",
+      "dataset": "HOLD",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.99384,
+      "orig_prob_hate": 0.00616,
+      "shap_tokens": [
+        "మీ",
+        "రు ",
+        "ఇం",
+        "డి",
+        "యా ",
+        "ను ",
+        "గౌ",
+        "రవిం",
+        "చడం ",
+        "మం",
+        "చి",
+        "ది.",
+        "జై ",
+        "శ్",
+        "రీ",
+        "ర"
+      ],
+      "shap_values_hof": [
+        -0.010442,
+        0.00731,
+        0.002317,
+        -0.011016,
+        0.003919,
+        -0.006968,
+        -0.003956,
+        -0.008963,
+        0.067986,
+        0.022454,
+        0.015494,
+        -0.009034,
+        -0.051368,
+        -0.048532,
+        -0.013854,
+        0.005197
+      ],
+      "lime_features": [
+        "జ",
+        "రవ",
+        "గ",
+        "శ",
+        "ద",
+        "య",
+        "చ",
+        "డ",
+        "ర",
+        "ర",
+        "న",
+        "మ",
+        "మ",
+        "ఇ",
+        "చడ"
+      ],
+      "lime_weights": [
+        -0.047847,
+        -0.035788,
+        -0.027497,
+        -0.025242,
+        0.024167,
+        -0.021328,
+        0.019915,
+        -0.016876,
+        0.012252,
+        -0.011914,
+        0.01086,
+        -0.009498,
+        0.00793,
+        -0.005611,
+        -0.0033
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "చడం"
+            ],
+            "deleted_text": "మీరు ఇండియా ను గౌరవిం మంచిది.జై శ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.99334,
+            "probability_drop": 0.000501,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "జ"
+            ],
+            "deleted_text": "మీరు ఇండియా ను గౌరవించడం మంచిది.ై శ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.990151,
+            "probability_drop": 0.003689,
+            "decreased": true
+          },
+          "random": {
+            "seed": 78,
+            "deleted_text": "మీరు ఇండియా ను గౌరవించడం మంచిది. శ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.989371,
+            "probability_drop": 0.00447,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "చడం",
+              "జై",
+              "శ్"
+            ],
+            "deleted_text": "మీరు ఇండియా ను గౌరవిం మంచిది. రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.971313,
+            "probability_drop": 0.022528,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "జ",
+              "రవ",
+              "గ"
+            ],
+            "deleted_text": "మీరు ఇండియా ను ౌించడం మంచిది.ై శ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.816328,
+            "probability_drop": 0.177512,
+            "decreased": true
+          },
+          "random": {
+            "seed": 80,
+            "deleted_text": "ఇండియా ను గౌరవించడం . శ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.996442,
+            "probability_drop": -0.002601,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "చడం",
+              "జై",
+              "శ్",
+              "మం",
+              "చి"
+            ],
+            "deleted_text": "మీరు ఇండియా ను గౌరవిం ది. రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.974458,
+            "probability_drop": 0.019383,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "జ",
+              "రవ",
+              "గ",
+              "శ",
+              "ద"
+            ],
+            "deleted_text": "మీరు ఇండియా ను ౌించడం మంచిి.ై ్రీరాం",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.830304,
+            "probability_drop": 0.163537,
+            "decreased": true
+          },
+          "random": {
+            "seed": 82,
+            "deleted_text": "మీరు ఇండియా .",
+            "orig_prob": 0.99384,
+            "modified_prob": 0.984665,
+            "probability_drop": 0.009176,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 1,
+      "text": "இந்த படம் வெற்றி அடைய வாழ்த்துக்கள்.. by movie lover",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.998857,
+      "orig_prob_hate": 0.001143,
+      "shap_tokens": [
+        "இந்",
+        "த ",
+        "படம் ",
+        "வெ",
+        "ற்",
+        "றி ",
+        "அடை",
+        "ய ",
+        "வா",
+        "ழ்",
+        "த்",
+        "து",
+        "க்",
+        "கள்.. ",
+        "by ",
+        "movie ",
+        "lover"
+      ],
+      "shap_values_hof": [
+        -0.003161,
+        -0.001956,
+        -0.002624,
+        -0.002695,
+        -0.006179,
+        -0.000103,
+        -0.003298,
+        -0.00288,
+        -0.006502,
+        -0.003798,
+        -0.00013,
+        -0.00078,
+        -0.003058,
+        -0.002767,
+        -0.001355,
+        -0.001653,
+        -0.002903
+      ],
+      "lime_features": [
+        "ய",
+        "lover",
+        "த",
+        "க",
+        "த",
+        "ற",
+        "வ",
+        "அட",
+        "ற",
+        "by",
+        "ழ",
+        "வ",
+        "movie",
+        "கள",
+        "த"
+      ],
+      "lime_weights": [
+        -0.007304,
+        -0.007129,
+        -0.005628,
+        -0.005413,
+        -0.005409,
+        -0.004827,
+        -0.004404,
+        -0.004017,
+        -0.003673,
+        -0.003614,
+        -0.00341,
+        -0.001977,
+        -0.001515,
+        0.001352,
+        -0.000863
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "வா"
+            ],
+            "deleted_text": "இந்த படம் வெற்றி அடைய ழ்த்துக்கள்.. by movie lover",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998182,
+            "probability_drop": 0.000675,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ய"
+            ],
+            "deleted_text": "இந்த படம் வெற்றி அடை வாழ்த்துக்கள்.. by movie lover",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998877,
+            "probability_drop": -2e-05,
+            "decreased": false
+          },
+          "random": {
+            "seed": 178,
+            "deleted_text": "இந்த படம் வெற்றி அடைய .. by movie lover",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998766,
+            "probability_drop": 9.1e-05,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "வா",
+              "ற்",
+              "ழ்"
+            ],
+            "deleted_text": "இந்த படம் வெறி அடைய த்துக்கள்.. by movie lover",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998052,
+            "probability_drop": 0.000805,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ய",
+              "lover",
+              "த"
+            ],
+            "deleted_text": "இந் படம் வெற்றி அடை வாழ்த்துக்கள்.. by movie",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998858,
+            "probability_drop": -1e-06,
+            "decreased": false
+          },
+          "random": {
+            "seed": 180,
+            "deleted_text": "இந்த வெற்றி அடைய .. by movie",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998698,
+            "probability_drop": 0.000159,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "வா",
+              "ற்",
+              "ழ்",
+              "அடை",
+              "இந்"
+            ],
+            "deleted_text": "த படம் வெறி ய த்துக்கள்.. by movie lover",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998386,
+            "probability_drop": 0.000471,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ய",
+              "lover",
+              "த",
+              "க",
+              "த"
+            ],
+            "deleted_text": "இந் படம் வெற்றி அடை வாழ்்து்கள்.. by movie",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.99817,
+            "probability_drop": 0.000687,
+            "decreased": true
+          },
+          "random": {
+            "seed": 182,
+            "deleted_text": "படம் வாழ்த்துக்கள்.. movie",
+            "orig_prob": 0.998857,
+            "modified_prob": 0.998818,
+            "probability_drop": 4e-05,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 2,
+      "text": "Padam Ethanna vettu vaanga pogudho theriyala",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.930702,
+      "orig_prob_hate": 0.930702,
+      "shap_tokens": [
+        "Padam ",
+        "Ethanna ",
+        "vettu ",
+        "vaanga ",
+        "pogudho ",
+        "theriyala"
+      ],
+      "shap_values_hof": [
+        -0.030108,
+        -0.019866,
+        0.33027,
+        0.47347,
+        0.243591,
+        -0.113638
+      ],
+      "lime_features": [
+        "vaanga",
+        "pogudho",
+        "vettu",
+        "theriyala",
+        "Padam",
+        "Ethanna"
+      ],
+      "lime_weights": [
+        0.666344,
+        0.206676,
+        0.164892,
+        0.147253,
+        0.075043,
+        0.034858
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "vaanga"
+            ],
+            "deleted_text": "Padam Ethanna vettu pogudho theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.092631,
+            "probability_drop": 0.838071,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaanga"
+            ],
+            "deleted_text": "Padam Ethanna vettu pogudho theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.092631,
+            "probability_drop": 0.838071,
+            "decreased": true
+          },
+          "random": {
+            "seed": 278,
+            "deleted_text": "Padam Ethanna vettu pogudho theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.092631,
+            "probability_drop": 0.838071,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "vaanga",
+              "vettu",
+              "pogudho"
+            ],
+            "deleted_text": "Padam Ethanna theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.013821,
+            "probability_drop": 0.916881,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaanga",
+              "pogudho",
+              "vettu"
+            ],
+            "deleted_text": "Padam Ethanna theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.013821,
+            "probability_drop": 0.916881,
+            "decreased": true
+          },
+          "random": {
+            "seed": 280,
+            "deleted_text": "Padam vaanga theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.929354,
+            "probability_drop": 0.001349,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "vaanga",
+              "vettu",
+              "pogudho",
+              "theriyala",
+              "Padam"
+            ],
+            "deleted_text": "Ethanna",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.005864,
+            "probability_drop": 0.924839,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaanga",
+              "pogudho",
+              "vettu",
+              "theriyala",
+              "Padam"
+            ],
+            "deleted_text": "Ethanna",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.005864,
+            "probability_drop": 0.924839,
+            "decreased": true
+          },
+          "random": {
+            "seed": 282,
+            "deleted_text": "theriyala",
+            "orig_prob": 0.930702,
+            "modified_prob": 0.016721,
+            "probability_drop": 0.913981,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 3,
+      "text": "vedu avvadu ra child artist aaaaa antha over action minguthunnadu",
+      "language": "Telugu",
+      "dataset": "HOLD",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.941665,
+      "orig_prob_hate": 0.941665,
+      "shap_tokens": [
+        "vedu ",
+        "avvadu ",
+        "ra ",
+        "child ",
+        "artist ",
+        "aaaaa ",
+        "antha ",
+        "over ",
+        "action ",
+        "minguthunnadu"
+      ],
+      "shap_values_hof": [
+        0.130614,
+        0.324548,
+        0.00101,
+        -0.006667,
+        -0.090515,
+        -0.085171,
+        0.072463,
+        0.216965,
+        0.054969,
+        0.276464
+      ],
+      "lime_features": [
+        "ra",
+        "minguthunnadu",
+        "antha",
+        "over",
+        "avvadu",
+        "action",
+        "vedu",
+        "child",
+        "aaaaa",
+        "artist"
+      ],
+      "lime_weights": [
+        0.19699,
+        0.185361,
+        0.175506,
+        0.15428,
+        0.130729,
+        0.102029,
+        0.100175,
+        0.083395,
+        0.030619,
+        0.027035
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "avvadu"
+            ],
+            "deleted_text": "vedu ra child artist aaaaa antha over action minguthunnadu",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.943106,
+            "probability_drop": -0.00144,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "ra"
+            ],
+            "deleted_text": "vedu avvadu child artist aaaaa antha over action minguthunnadu",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.942426,
+            "probability_drop": -0.00076,
+            "decreased": false
+          },
+          "random": {
+            "seed": 378,
+            "deleted_text": "vedu avvadu ra child artist aaaaa over action minguthunnadu",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.94547,
+            "probability_drop": -0.003805,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "avvadu",
+              "minguthunnadu",
+              "over"
+            ],
+            "deleted_text": "vedu ra child artist aaaaa antha action",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.934888,
+            "probability_drop": 0.006777,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ra",
+              "minguthunnadu",
+              "antha"
+            ],
+            "deleted_text": "vedu avvadu child artist aaaaa over action",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.946828,
+            "probability_drop": -0.005163,
+            "decreased": false
+          },
+          "random": {
+            "seed": 380,
+            "deleted_text": "vedu ra child aaaaa antha action minguthunnadu",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.928438,
+            "probability_drop": 0.013227,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "avvadu",
+              "minguthunnadu",
+              "over",
+              "vedu",
+              "artist"
+            ],
+            "deleted_text": "ra child aaaaa antha action",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.41543,
+            "probability_drop": 0.526235,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ra",
+              "minguthunnadu",
+              "antha",
+              "over",
+              "avvadu"
+            ],
+            "deleted_text": "vedu child artist aaaaa action",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.287438,
+            "probability_drop": 0.654227,
+            "decreased": true
+          },
+          "random": {
+            "seed": 382,
+            "deleted_text": "ra aaaaa antha action minguthunnadu",
+            "orig_prob": 0.941665,
+            "modified_prob": 0.911788,
+            "probability_drop": 0.029877,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 4,
+      "text": "புதுக்கோட்டை மாவட்டம் வாரைவளர் வாராப்பூர் நாட்டு கள்ளர்கள் சார்பாக வெற்றி பெற வாழ்த்துகள்...",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.998696,
+      "orig_prob_hate": 0.001304,
+      "shap_tokens": [
+        "பு",
+        "து",
+        "க்",
+        "கோ",
+        "ட்",
+        "டை ",
+        "மா",
+        "வட்",
+        "டம் ",
+        "வா",
+        "ரை",
+        "வளர் ",
+        "வா",
+        "ரா",
+        "ப்",
+        "பூ",
+        "ர் ",
+        "நா",
+        "ட்",
+        "டு ",
+        "கள்",
+        "ளர்",
+        "கள் ",
+        "சா",
+        "ர்",
+        "பா",
+        "க ",
+        "வெ",
+        "ற்",
+        "றி ",
+        "பெ",
+        "ற ",
+        "வா",
+        "ழ்",
+        "த்",
+        "து",
+        "கள"
+      ],
+      "shap_values_hof": [
+        0.003145,
+        -0.020661,
+        0.00352,
+        9.3e-05,
+        -0.000222,
+        0.001465,
+        0.0031,
+        -0.002145,
+        -0.002713,
+        -0.000599,
+        -0.001673,
+        -0.002184,
+        0.002586,
+        0.001998,
+        -0.002862,
+        -0.005442,
+        -0.004422,
+        -0.001639,
+        -0.003959,
+        -0.002929,
+        -0.000424,
+        0.001968,
+        0.001721,
+        -0.000735,
+        -0.000638,
+        -0.000641,
+        -0.000755,
+        -0.000854,
+        -0.001461,
+        -0.000609,
+        -0.000919,
+        -0.000763,
+        -0.003492,
+        -0.000927,
+        0.000163,
+        0.000168,
+        -0.001938
+      ],
+      "lime_features": [
+        "ற",
+        "கள",
+        "ப",
+        "ப",
+        "ப",
+        "வ",
+        "ளர",
+        "ப",
+        "த",
+        "வ",
+        "வ",
+        "த",
+        "ற",
+        "ர",
+        "ர"
+      ],
+      "lime_weights": [
+        -0.031884,
+        0.025174,
+        -0.024656,
+        -0.024012,
+        -0.023373,
+        -0.022057,
+        0.021846,
+        -0.019518,
+        0.016473,
+        -0.016216,
+        -0.015541,
+        0.014861,
+        -0.012726,
+        -0.01263,
+        0.01242
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "து"
+            ],
+            "deleted_text": "புக்கோட்டை மாவட்டம் வாரைவளர் வாராப்பூர் நாட்டு கள்ளர்கள் சார்பாக வெற்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998625,
+            "probability_drop": 7.1e-05,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற"
+            ],
+            "deleted_text": "புதுக்கோட்டை மாவட்டம் வாரைவளர் வாராப்பூர் நாட்டு கள்ளர்கள் சார்பாக வெ்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998413,
+            "probability_drop": 0.000283,
+            "decreased": true
+          },
+          "random": {
+            "seed": 478,
+            "deleted_text": "புதுக்கோட்டை மாவட்டம் வாராப்பூர் நாட்டு கள்ளர்கள் சார்பாக வெற்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998736,
+            "probability_drop": -4e-05,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "து",
+              "பூ",
+              "ர்"
+            ],
+            "deleted_text": "புக்கோட்டை மாவட்டம் வாரைவள வாராப்ர் நாட்டு கள்ளர்கள் சார்பாக வெற்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998582,
+            "probability_drop": 0.000114,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற",
+              "கள",
+              "ப"
+            ],
+            "deleted_text": "ுதுக்கோட்டை மாவட்டம் வாரைவளர் வாராப்பூர் நாட்டு ்ளர்கள் சார்பாக வெ்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998355,
+            "probability_drop": 0.00034,
+            "decreased": true
+          },
+          "random": {
+            "seed": 480,
+            "deleted_text": "மாவட்டம் வாரைவளர் வாராப்பூர் நாட்டு கள்ளர்கள் வெற்றி வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998644,
+            "probability_drop": 5.2e-05,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "து",
+              "பூ",
+              "ர்",
+              "ட்",
+              "க்"
+            ],
+            "deleted_text": "புகோடை மாவட்டம் வாரைவள வாராப்ர் நாட்டு கள்ளர்கள் சார்பாக வெற்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998597,
+            "probability_drop": 9.9e-05,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற",
+              "கள",
+              "ப",
+              "ப",
+              "ப"
+            ],
+            "deleted_text": "ுதுக்கோட்டை மாவட்டம் வாரைவளர் வாரா்ூர் நாட்டு ்ளர்கள் சார்பாக வெ்றி பெற வாழ்த்துகள்...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998272,
+            "probability_drop": 0.000424,
+            "decreased": true
+          },
+          "random": {
+            "seed": 482,
+            "deleted_text": "வாரைவளர் வாராப்பூர் நாட்டு சார்பாக பெற ...",
+            "orig_prob": 0.998696,
+            "modified_prob": 0.998655,
+            "probability_drop": 4.1e-05,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 5,
+      "text": "Jai bheem  ஜாதி வெறி புடிச்ச தெவிடியா பசங்களா சாவுங்கடா",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.936043,
+      "orig_prob_hate": 0.936043,
+      "shap_tokens": [
+        "Jai ",
+        "bheem  ",
+        "ஜா",
+        "தி ",
+        "வெ",
+        "றி ",
+        "பு",
+        "டி",
+        "ச்",
+        "ச ",
+        "தெ",
+        "வி",
+        "டி",
+        "யா ",
+        "பசங்",
+        "களா ",
+        "சா",
+        "வு",
+        "ங்",
+        "கட"
+      ],
+      "shap_values_hof": [
+        -0.092973,
+        0.04559,
+        -0.047533,
+        -0.079407,
+        -0.021028,
+        0.111707,
+        0.046423,
+        0.044105,
+        -0.02066,
+        0.154214,
+        0.00882,
+        0.002568,
+        0.005477,
+        0.027,
+        0.177484,
+        0.093988,
+        0.209913,
+        0.194009,
+        -0.036597,
+        0.065916
+      ],
+      "lime_features": [
+        "கட",
+        "கள",
+        "ங",
+        "வ",
+        "ய",
+        "பசங",
+        "ட",
+        "வ",
+        "ச",
+        "ட",
+        "ப",
+        "ச",
+        "த",
+        "த",
+        "ஜ"
+      ],
+      "lime_weights": [
+        0.226673,
+        0.202925,
+        0.19252,
+        0.109897,
+        0.106347,
+        0.086632,
+        0.086116,
+        0.077026,
+        0.070317,
+        0.069745,
+        0.068204,
+        0.065835,
+        -0.062566,
+        0.060567,
+        0.047473
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "சா"
+            ],
+            "deleted_text": "Jai bheem ஜாதி வெறி புடிச்ச தெவிடியா பசங்களா வுங்கடா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.931165,
+            "probability_drop": 0.004878,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "கட"
+            ],
+            "deleted_text": "Jai bheem ஜாதி வெறி புடிச்ச தெவிடியா பசங்களா சாவுங்ா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.935899,
+            "probability_drop": 0.000144,
+            "decreased": true
+          },
+          "random": {
+            "seed": 578,
+            "deleted_text": "Jai bheem ஜாதி வெறி புடிச்ச தெவிடியா சாவுங்கடா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.927108,
+            "probability_drop": 0.008936,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "சா",
+              "வு",
+              "பசங்"
+            ],
+            "deleted_text": "Jai bheem ஜாதி வெறி புடிச்ச தெவிடியா களா ங்கடா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.904405,
+            "probability_drop": 0.031638,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "கட",
+              "கள",
+              "ங"
+            ],
+            "deleted_text": "Jai bheem ஜாதி வெறி புடிச்ச தெவிடியா பச்ா சாவுங்ா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.923957,
+            "probability_drop": 0.012086,
+            "decreased": true
+          },
+          "random": {
+            "seed": 580,
+            "deleted_text": "ஜாதி வெறி தெவிடியா பசங்களா சாவுங்கடா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.931961,
+            "probability_drop": 0.004082,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "சா",
+              "வு",
+              "பசங்",
+              "ச",
+              "றி"
+            ],
+            "deleted_text": "Jai bheem ஜாதி வெ புடி்ச தெவிடியா களா ங்கடா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.930248,
+            "probability_drop": 0.005795,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "கட",
+              "கள",
+              "ங",
+              "வ",
+              "ய"
+            ],
+            "deleted_text": "Jai bheem ஜாதி ெறி புடிச்ச தெவிடிா பச்ா சாவுங்ா",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.914902,
+            "probability_drop": 0.021141,
+            "decreased": true
+          },
+          "random": {
+            "seed": 582,
+            "deleted_text": "Jai வெறி புடிச்ச",
+            "orig_prob": 0.936043,
+            "modified_prob": 0.077052,
+            "probability_drop": 0.858991,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 6,
+      "text": "చిరంజీవి గారు మనసులో ఏం పెట్టుకోకుండా అంత మంచిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+      "language": "Telugu",
+      "dataset": "HOLD",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.890177,
+      "orig_prob_hate": 0.109823,
+      "shap_tokens": [
+        "చి",
+        "రం",
+        "జీ",
+        "వి ",
+        "గా",
+        "రు ",
+        "మనసు",
+        "లో ",
+        "ఏం ",
+        "పె",
+        "ట్",
+        "టు",
+        "కో",
+        "కుం",
+        "డా ",
+        "అం",
+        "త ",
+        "మం",
+        "చి",
+        "గా ",
+        "మా",
+        "ట్",
+        "లా",
+        "డిం",
+        "డు..........",
+        "నీ",
+        "కు ---------- ",
+        "కొ",
+        "వ్",
+        "వు ",
+        "ఎక్",
+        "కు",
+        "వ ",
+        "అం",
+        "దు",
+        "కని ",
+        "ఇట్",
+        "లా ",
+        "మా",
+        "ట్",
+        "లా",
+        "డు",
+        "తు",
+        "న్",
+        "నా",
+        "వ"
+      ],
+      "shap_values_hof": [
+        -0.040515,
+        -0.0468,
+        0.013217,
+        0.013882,
+        -0.112698,
+        -0.198033,
+        0.063667,
+        0.031302,
+        0.032078,
+        0.05662,
+        0.012818,
+        -0.007941,
+        0.029801,
+        0.055799,
+        -0.056216,
+        -0.017571,
+        -0.009716,
+        -0.124386,
+        -0.110357,
+        -0.062428,
+        0.014744,
+        0.014744,
+        0.01007,
+        0.01007,
+        0.029308,
+        0.029308,
+        0.028669,
+        0.028669,
+        0.009309,
+        0.009309,
+        0.054157,
+        0.058977,
+        0.015073,
+        0.021052,
+        0.055985,
+        0.057189,
+        0.01065,
+        0.01065,
+        0.043204,
+        0.066835,
+        0.002392,
+        0.002392,
+        0.00263,
+        0.00263,
+        -0.006555,
+        -0.006555
+      ],
+      "lime_features": [
+        "మనస",
+        "క",
+        "న",
+        "వ",
+        "వ",
+        "ల",
+        "ల",
+        "న",
+        "మ",
+        "త",
+        "ల",
+        "ర",
+        "జ",
+        "ట",
+        "ఇట"
+      ],
+      "lime_weights": [
+        -0.161008,
+        0.15192,
+        0.130508,
+        -0.11556,
+        0.105415,
+        0.095913,
+        0.094571,
+        0.085911,
+        -0.078579,
+        0.075633,
+        0.066175,
+        0.051724,
+        0.045001,
+        0.043273,
+        -0.035741
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "రు"
+            ],
+            "deleted_text": "చిరంజీవి గా మనసులో ఏం పెట్టుకోకుండా అంత మంచిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.862329,
+            "probability_drop": 0.027848,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "మనస"
+            ],
+            "deleted_text": "చిరంజీవి గారు ులో ఏం పెట్టుకోకుండా అంత మంచిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.742333,
+            "probability_drop": 0.147844,
+            "decreased": true
+          },
+          "random": {
+            "seed": 678,
+            "deleted_text": "చిరంజీవి గారు మనసులో ఏం పెట్టుకోకుండా అంత మంచిగా మాట్లాడిండు..........నీకు కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.875237,
+            "probability_drop": 0.01494,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "రు",
+              "మం",
+              "గా"
+            ],
+            "deleted_text": "చిరంజీవి మనసులో ఏం పెట్టుకోకుండా అంత చిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.088394,
+            "probability_drop": 0.801784,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "మనస",
+              "క",
+              "న"
+            ],
+            "deleted_text": "చిరంజీవి గారు ులో ఏం పెట్టుోకుండా అంత మంచిగా మాట్లాడిండు..........ీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.7489,
+            "probability_drop": 0.141277,
+            "decreased": true
+          },
+          "random": {
+            "seed": 680,
+            "deleted_text": "గారు మనసులో పెట్టుకోకుండా అంత మంచిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.943574,
+            "probability_drop": -0.053397,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "రు",
+              "మం",
+              "గా",
+              "చి",
+              "ట్"
+            ],
+            "deleted_text": "రంజీవి మనసులో ఏం పెటుకోకుండా అంత చిగా మాట్లాడిండు..........నీకు ---------- కొవ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.073201,
+            "probability_drop": 0.816976,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "మనస",
+              "క",
+              "న",
+              "వ",
+              "వ"
+            ],
+            "deleted_text": "చిరంజీి గారు ులో ఏం పెట్టుోకుండా అంత మంచిగా మాట్లాడిండు..........ీకు ---------- కొ్వు ఎక్కువ అందుకని ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.417855,
+            "probability_drop": 0.472322,
+            "decreased": true
+          },
+          "random": {
+            "seed": 682,
+            "deleted_text": "చిరంజీవి గారు మనసులో పెట్టుకోకుండా మంచిగా మాట్లాడిండు.......... కొవ్వు ఎక్కువ ఇట్లా మాట్లాడుతున్నావ్",
+            "orig_prob": 0.890177,
+            "modified_prob": 0.953553,
+            "probability_drop": -0.063376,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 7,
+      "text": "Ithu polulla padam ikkanekkonde abhinayichu kanikkan pattu",
+      "language": "Malayalam",
+      "dataset": "DravidianMalayalam",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.983373,
+      "orig_prob_hate": 0.016627,
+      "shap_tokens": [
+        "Ithu ",
+        "polulla ",
+        "padam ",
+        "ikkanekkonde ",
+        "abhinayichu ",
+        "kanikkan ",
+        "pattu"
+      ],
+      "shap_values_hof": [
+        0.024956,
+        -0.0098,
+        -0.029258,
+        0.039023,
+        -0.017055,
+        -0.020911,
+        -0.017313
+      ],
+      "lime_features": [
+        "abhinayichu",
+        "Ithu",
+        "polulla",
+        "kanikkan",
+        "pattu",
+        "ikkanekkonde",
+        "padam"
+      ],
+      "lime_weights": [
+        -0.012652,
+        0.011553,
+        0.009025,
+        0.003328,
+        0.002161,
+        -0.001108,
+        6.5e-05
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "ikkanekkonde"
+            ],
+            "deleted_text": "Ithu polulla padam abhinayichu kanikkan pattu",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.989925,
+            "probability_drop": -0.006552,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "abhinayichu"
+            ],
+            "deleted_text": "Ithu polulla padam ikkanekkonde kanikkan pattu",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.989042,
+            "probability_drop": -0.005669,
+            "decreased": false
+          },
+          "random": {
+            "seed": 778,
+            "deleted_text": "Ithu polulla padam ikkanekkonde abhinayichu kanikkan",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.975074,
+            "probability_drop": 0.008299,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "ikkanekkonde",
+              "padam",
+              "Ithu"
+            ],
+            "deleted_text": "polulla abhinayichu kanikkan pattu",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.989991,
+            "probability_drop": -0.006619,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "abhinayichu",
+              "Ithu",
+              "polulla"
+            ],
+            "deleted_text": "padam ikkanekkonde kanikkan pattu",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.997227,
+            "probability_drop": -0.013854,
+            "decreased": false
+          },
+          "random": {
+            "seed": 780,
+            "deleted_text": "Ithu polulla ikkanekkonde kanikkan",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.980768,
+            "probability_drop": 0.002605,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "ikkanekkonde",
+              "padam",
+              "Ithu",
+              "kanikkan",
+              "pattu"
+            ],
+            "deleted_text": "polulla abhinayichu",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.980844,
+            "probability_drop": 0.002529,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "abhinayichu",
+              "Ithu",
+              "polulla",
+              "kanikkan",
+              "pattu"
+            ],
+            "deleted_text": "padam ikkanekkonde",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.976849,
+            "probability_drop": 0.006523,
+            "decreased": true
+          },
+          "random": {
+            "seed": 782,
+            "deleted_text": "padam kanikkan",
+            "orig_prob": 0.983373,
+            "modified_prob": 0.994948,
+            "probability_drop": -0.011575,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 8,
+      "text": "Yellam Avan seyal . . .",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.96805,
+      "orig_prob_hate": 0.03195,
+      "shap_tokens": [
+        "Yellam ",
+        "Avan ",
+        "seyal"
+      ],
+      "shap_values_hof": [
+        -0.03426,
+        0.017247,
+        -0.021806
+      ],
+      "lime_features": [
+        "Avan",
+        "seyal",
+        "Yellam"
+      ],
+      "lime_weights": [
+        0.066759,
+        0.062391,
+        -0.046863
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "Yellam"
+            ],
+            "deleted_text": "Avan seyal . . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.721076,
+            "probability_drop": 0.246974,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "Avan"
+            ],
+            "deleted_text": "Yellam seyal . . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.963253,
+            "probability_drop": 0.004797,
+            "decreased": true
+          },
+          "random": {
+            "seed": 878,
+            "deleted_text": "Yellam Avan . . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.993596,
+            "probability_drop": -0.025546,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "Yellam",
+              "seyal",
+              "Avan"
+            ],
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "Avan",
+              "seyal",
+              "Yellam"
+            ],
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          },
+          "random": {
+            "seed": 880,
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "Yellam",
+              "seyal",
+              "Avan"
+            ],
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "Avan",
+              "seyal",
+              "Yellam"
+            ],
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          },
+          "random": {
+            "seed": 882,
+            "deleted_text": ". . .",
+            "orig_prob": 0.96805,
+            "modified_prob": 0.98605,
+            "probability_drop": -0.018,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 9,
+      "text": "ayye mechalla    Lucifer daa   Lalettan fan like adi",
+      "language": "Malayalam",
+      "dataset": "DravidianMalayalam",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.998656,
+      "orig_prob_hate": 0.001344,
+      "shap_tokens": [
+        "ayye ",
+        "mechalla    ",
+        "Lucifer ",
+        "daa   ",
+        "Lalettan ",
+        "fan ",
+        "like ",
+        "adi"
+      ],
+      "shap_values_hof": [
+        0.00555,
+        0.005868,
+        -0.007769,
+        0.007897,
+        -0.054527,
+        -0.050367,
+        0.023573,
+        0.024134
+      ],
+      "lime_features": [
+        "Lalettan",
+        "fan",
+        "like",
+        "mechalla",
+        "daa",
+        "ayye",
+        "adi",
+        "Lucifer"
+      ],
+      "lime_weights": [
+        -0.00379,
+        -0.001175,
+        -0.000726,
+        -0.000616,
+        0.000326,
+        -0.000144,
+        0.000108,
+        3.5e-05
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "Lalettan"
+            ],
+            "deleted_text": "ayye mechalla Lucifer daa fan like adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.994372,
+            "probability_drop": 0.004283,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "Lalettan"
+            ],
+            "deleted_text": "ayye mechalla Lucifer daa fan like adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.994372,
+            "probability_drop": 0.004283,
+            "decreased": true
+          },
+          "random": {
+            "seed": 978,
+            "deleted_text": "ayye Lucifer daa Lalettan fan like adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.998692,
+            "probability_drop": -3.7e-05,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "Lalettan",
+              "fan",
+              "adi"
+            ],
+            "deleted_text": "ayye mechalla Lucifer daa like",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.992953,
+            "probability_drop": 0.005703,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "Lalettan",
+              "fan",
+              "like"
+            ],
+            "deleted_text": "ayye mechalla Lucifer daa adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.942346,
+            "probability_drop": 0.05631,
+            "decreased": true
+          },
+          "random": {
+            "seed": 980,
+            "deleted_text": "Lucifer daa fan like adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.99716,
+            "probability_drop": 0.001496,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "Lalettan",
+              "fan",
+              "adi",
+              "like",
+              "daa"
+            ],
+            "deleted_text": "ayye mechalla Lucifer",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.984066,
+            "probability_drop": 0.014589,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "Lalettan",
+              "fan",
+              "like",
+              "mechalla",
+              "daa"
+            ],
+            "deleted_text": "ayye Lucifer adi",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.985251,
+            "probability_drop": 0.013405,
+            "decreased": true
+          },
+          "random": {
+            "seed": 982,
+            "deleted_text": "ayye mechalla daa",
+            "orig_prob": 0.998656,
+            "modified_prob": 0.827475,
+            "probability_drop": 0.17118,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 10,
+      "text": "Mugil anna movie sirantha vetriyadaya vaazthukal...",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.997916,
+      "orig_prob_hate": 0.002084,
+      "shap_tokens": [
+        "Mugil ",
+        "anna ",
+        "movie ",
+        "sirantha ",
+        "vetriyadaya ",
+        "vaazthukal"
+      ],
+      "shap_values_hof": [
+        0.048047,
+        -0.063343,
+        -0.001943,
+        0.001871,
+        0.000529,
+        -0.030474
+      ],
+      "lime_features": [
+        "vaazthukal",
+        "anna",
+        "Mugil",
+        "sirantha",
+        "vetriyadaya",
+        "movie"
+      ],
+      "lime_weights": [
+        -0.047783,
+        -0.009381,
+        0.008483,
+        0.003875,
+        0.002725,
+        -0.001612
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "anna"
+            ],
+            "deleted_text": "Mugil movie sirantha vetriyadaya vaazthukal...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.997524,
+            "probability_drop": 0.000393,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaazthukal"
+            ],
+            "deleted_text": "Mugil anna movie sirantha vetriyadaya ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.97158,
+            "probability_drop": 0.026337,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1078,
+            "deleted_text": "Mugil anna movie sirantha vetriyadaya ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.97158,
+            "probability_drop": 0.026337,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "anna",
+              "Mugil",
+              "vaazthukal"
+            ],
+            "deleted_text": "movie sirantha vetriyadaya ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.920379,
+            "probability_drop": 0.077538,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaazthukal",
+              "anna",
+              "Mugil"
+            ],
+            "deleted_text": "movie sirantha vetriyadaya ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.920379,
+            "probability_drop": 0.077538,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1080,
+            "deleted_text": "Mugil anna sirantha ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.988503,
+            "probability_drop": 0.009413,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "anna",
+              "Mugil",
+              "vaazthukal",
+              "movie",
+              "sirantha"
+            ],
+            "deleted_text": "vetriyadaya ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.958478,
+            "probability_drop": 0.039438,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "vaazthukal",
+              "anna",
+              "Mugil",
+              "sirantha",
+              "vetriyadaya"
+            ],
+            "deleted_text": "movie ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.997124,
+            "probability_drop": 0.000792,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1082,
+            "deleted_text": "sirantha ...",
+            "orig_prob": 0.997916,
+            "modified_prob": 0.987633,
+            "probability_drop": 0.010283,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 11,
+      "text": "மதுரை மாவட்டம் கள்ளர் நாட்டின் சார்பாக படம் வெற்றி பெற வாழ்த்துக்கள்.....",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.998809,
+      "orig_prob_hate": 0.001191,
+      "shap_tokens": [
+        "மது",
+        "ரை ",
+        "மா",
+        "வட்",
+        "டம் ",
+        "கள்",
+        "ளர் ",
+        "நா",
+        "ட்",
+        "டி",
+        "ன் ",
+        "சா",
+        "ர்",
+        "பா",
+        "க ",
+        "படம் ",
+        "வெ",
+        "ற்",
+        "றி ",
+        "பெ",
+        "ற ",
+        "வா",
+        "ழ்",
+        "த்",
+        "து",
+        "க்",
+        "கள"
+      ],
+      "shap_values_hof": [
+        -0.00039,
+        -0.002557,
+        0.001326,
+        -0.004236,
+        -0.002113,
+        -0.001719,
+        0.00045,
+        -0.001455,
+        -0.001267,
+        -0.000531,
+        -0.001379,
+        -0.000296,
+        -0.001972,
+        -0.000774,
+        -0.002806,
+        -0.002949,
+        -0.003372,
+        -0.003673,
+        -0.001939,
+        -0.003355,
+        -0.00246,
+        -0.006774,
+        -0.003646,
+        0.008728,
+        -0.002862,
+        -0.00026,
+        -0.003325
+      ],
+      "lime_features": [
+        "ற",
+        "டம",
+        "வ",
+        "ற",
+        "ர",
+        "க",
+        "ர",
+        "ப",
+        "ழ",
+        "வட",
+        "த",
+        "ட",
+        "படம",
+        "ளர",
+        "ப"
+      ],
+      "lime_weights": [
+        -0.018573,
+        -0.015969,
+        -0.015907,
+        -0.014908,
+        -0.012469,
+        -0.012358,
+        -0.011686,
+        -0.011446,
+        -0.010878,
+        -0.010425,
+        0.009478,
+        -0.008902,
+        0.008144,
+        0.007574,
+        -0.006921
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "த்"
+            ],
+            "deleted_text": "மதுரை மாவட்டம் கள்ளர் நாட்டின் சார்பாக படம் வெற்றி பெற வாழ்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998788,
+            "probability_drop": 2.1e-05,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற"
+            ],
+            "deleted_text": "மதுரை மாவட்டம் கள்ளர் நாட்டின் சார்பாக படம் வெ்றி பெற வாழ்த்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998466,
+            "probability_drop": 0.000343,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1178,
+            "deleted_text": "மதுரை மாவட்டம் கள்ளர் சார்பாக படம் வெற்றி பெற வாழ்த்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998821,
+            "probability_drop": -1.2e-05,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "த்",
+              "வா",
+              "வட்"
+            ],
+            "deleted_text": "மதுரை மாடம் கள்ளர் நாட்டின் சார்பாக படம் வெற்றி பெற ழ்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998709,
+            "probability_drop": 0.0001,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற",
+              "டம",
+              "வ"
+            ],
+            "deleted_text": "மதுரை மாட்் கள்ளர் நாட்டின் சார்பாக படம் வெ்றி பெற வாழ்த்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.997957,
+            "probability_drop": 0.000852,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1180,
+            "deleted_text": "மதுரை மாவட்டம் நாட்டின் படம் வெற்றி பெற .....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998771,
+            "probability_drop": 3.8e-05,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "த்",
+              "வா",
+              "வட்",
+              "ற்",
+              "ழ்"
+            ],
+            "deleted_text": "மதுரை மாடம் கள்ளர் நாட்டின் சார்பாக படம் வெறி பெற துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998706,
+            "probability_drop": 0.000103,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ற",
+              "டம",
+              "வ",
+              "ற",
+              "ர"
+            ],
+            "deleted_text": "மதுை மாட்் கள்ளர் நாட்டின் சார்பாக படம் வெ்ி பெற வாழ்த்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998242,
+            "probability_drop": 0.000567,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1182,
+            "deleted_text": "மதுரை மாவட்டம் நாட்டின் வாழ்த்துக்கள்.....",
+            "orig_prob": 0.998809,
+            "modified_prob": 0.998751,
+            "probability_drop": 5.8e-05,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 12,
+      "text": "Fb live kand net kalanjavar ivde like..",
+      "language": "Malayalam",
+      "dataset": "DravidianMalayalam",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.998633,
+      "orig_prob_hate": 0.001367,
+      "shap_tokens": [
+        "Fb ",
+        "live ",
+        "kand ",
+        "net ",
+        "kalanjavar ",
+        "ivde ",
+        "like"
+      ],
+      "shap_values_hof": [
+        -0.005925,
+        -0.005748,
+        -0.005756,
+        -0.005868,
+        -0.086566,
+        -0.086794,
+        0.150955
+      ],
+      "lime_features": [
+        "like",
+        "kalanjavar",
+        "kand",
+        "Fb",
+        "net",
+        "live",
+        "ivde"
+      ],
+      "lime_weights": [
+        -0.003418,
+        -0.001188,
+        -0.000953,
+        -0.000938,
+        -0.000724,
+        -0.000609,
+        -0.000402
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "like"
+            ],
+            "deleted_text": "Fb live kand net kalanjavar ivde ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998447,
+            "probability_drop": 0.000186,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "like"
+            ],
+            "deleted_text": "Fb live kand net kalanjavar ivde ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998447,
+            "probability_drop": 0.000186,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1278,
+            "deleted_text": "Fb live kand net ivde like..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.99853,
+            "probability_drop": 0.000103,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "like",
+              "ivde",
+              "kalanjavar"
+            ],
+            "deleted_text": "Fb live kand net ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998739,
+            "probability_drop": -0.000106,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "like",
+              "kalanjavar",
+              "kand"
+            ],
+            "deleted_text": "Fb live net ivde ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.997264,
+            "probability_drop": 0.001369,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1280,
+            "deleted_text": "Fb live kand kalanjavar ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998643,
+            "probability_drop": -1e-05,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "like",
+              "ivde",
+              "kalanjavar",
+              "Fb",
+              "net"
+            ],
+            "deleted_text": "live kand ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998495,
+            "probability_drop": 0.000138,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "like",
+              "kalanjavar",
+              "kand",
+              "Fb",
+              "net"
+            ],
+            "deleted_text": "live ivde ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.997366,
+            "probability_drop": 0.001267,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1282,
+            "deleted_text": "Fb net ..",
+            "orig_prob": 0.998633,
+            "modified_prob": 0.998838,
+            "probability_drop": -0.000205,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 13,
+      "text": "NCB has admitted in court no drugs were recovered from Aryan. But there has to be a media trial still. How else to divert from BJPs colossal failures &amp its leaders barbaric conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq  COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out  REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+      "language": "Hindi",
+      "dataset": "HASOC2021",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.848555,
+      "orig_prob_hate": 0.151445,
+      "shap_tokens": [
+        "NCB ",
+        "has ",
+        "admitted ",
+        "in ",
+        "court ",
+        "no ",
+        "drugs ",
+        "were ",
+        "recovered ",
+        "from ",
+        "Aryan. ",
+        "But ",
+        "there ",
+        "has ",
+        "to ",
+        "be ",
+        "a ",
+        "media ",
+        "trial ",
+        "still. ",
+        "How ",
+        "else ",
+        "to ",
+        "divert ",
+        "from ",
+        "BJPs ",
+        "colossal ",
+        "failures &",
+        "amp ",
+        "its ",
+        "leaders ",
+        "barbaric ",
+        "conduct ",
+        "against ",
+        "farmers ",
+        "SHAME ",
+        "WeStandWithAryanKhan ",
+        "httpst.",
+        "coCXoRwfIFaq  ",
+        "COMMENT ",
+        "SalmanNizami_ ",
+        "If ",
+        "no ",
+        "drugs ",
+        "were ",
+        "found ",
+        "then ",
+        "why ",
+        "he ",
+        "is ",
+        "still ",
+        "in ",
+        "custody ",
+        "and ",
+        "whatever ",
+        "u ",
+        "r ",
+        "saying ",
+        "please ",
+        "provide ",
+        "proof ",
+        "of ",
+        "NCB ",
+        "statement. ",
+        "Peace ",
+        "out  ",
+        "REPLY-",
+        "COMMENT ",
+        "imabsahani ",
+        "SalmanNizami_ ",
+        "NCB ",
+        "wants ",
+        "to ",
+        "know ",
+        "the ",
+        "origin ",
+        "of ",
+        "those ",
+        "drugs"
+      ],
+      "shap_values_hof": [
+        0.007688,
+        0.007688,
+        -0.003629,
+        0.000426,
+        0.000964,
+        0.000964,
+        0.069029,
+        0.021101,
+        -0.004748,
+        -0.004748,
+        -0.018343,
+        -0.013334,
+        0.001132,
+        0.001132,
+        0.001132,
+        0.001132,
+        0.002406,
+        0.002406,
+        0.003589,
+        0.003589,
+        0.007734,
+        0.010565,
+        0.023416,
+        0.037751,
+        -0.003491,
+        -0.003491,
+        -0.004642,
+        -0.004642,
+        0.012487,
+        0.009113,
+        0.110102,
+        0.127501,
+        -0.005573,
+        -0.005573,
+        -0.005573,
+        -0.005573,
+        -0.019977,
+        -0.018155,
+        -0.038686,
+        -0.035885,
+        0.015993,
+        0.015993,
+        -0.002946,
+        0.018677,
+        -0.018462,
+        -0.018462,
+        -0.006809,
+        -0.006809,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.000257,
+        -0.028133,
+        -0.020697,
+        -0.009461,
+        -0.009461,
+        -0.026683,
+        -0.037291,
+        -0.026934,
+        -0.026934,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.002614,
+        0.00151,
+        0.00151,
+        0.00151,
+        0.00151,
+        0.00151
+      ],
+      "lime_features": [
+        "recovered",
+        "How",
+        "barbaric",
+        "no",
+        "saying",
+        "failures",
+        "out",
+        "SHAME",
+        "court",
+        "know",
+        "against",
+        "has",
+        "But",
+        "SalmanNizami_",
+        "drugs"
+      ],
+      "lime_weights": [
+        -0.134439,
+        -0.093692,
+        0.089218,
+        -0.088556,
+        -0.085795,
+        -0.064116,
+        0.048615,
+        -0.045751,
+        -0.043465,
+        0.04194,
+        0.040406,
+        0.029904,
+        -0.027433,
+        0.016319,
+        -0.008454
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "barbaric"
+            ],
+            "deleted_text": "NCB has admitted in court no drugs were recovered from Aryan. But there has to be a media trial still. How else to divert from BJPs colossal failures &amp its leaders conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.941275,
+            "probability_drop": -0.092719,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "recovered"
+            ],
+            "deleted_text": "NCB has admitted in court no drugs were from Aryan. But there has to be a media trial still. How else to divert from BJPs colossal failures &amp its leaders barbaric conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.906471,
+            "probability_drop": -0.057916,
+            "decreased": false
+          },
+          "random": {
+            "seed": 1378,
+            "deleted_text": "NCB has admitted in court no drugs were recovered from Aryan. But there has to be a media trial still. How else to divert from BJPs colossal &amp its leaders barbaric conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.883928,
+            "probability_drop": -0.035372,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "barbaric",
+              "leaders",
+              "drugs"
+            ],
+            "deleted_text": "NCB has admitted in court no were recovered from Aryan. But there has to be a media trial still. How else to divert from BJPs colossal failures &amp its conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.936321,
+            "probability_drop": -0.087765,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "recovered",
+              "How",
+              "barbaric"
+            ],
+            "deleted_text": "NCB has admitted in court no drugs were from Aryan. But there has to be a media trial still. else to divert from BJPs colossal failures &amp its leaders conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.932456,
+            "probability_drop": -0.083901,
+            "decreased": false
+          },
+          "random": {
+            "seed": 1380,
+            "deleted_text": "NCB has admitted in court no drugs were recovered from Aryan. But re has to be a media trial still. How else to divert from BJPs colossal failures &amp its leaders barbaric conduct farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.751495,
+            "probability_drop": 0.097061,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "barbaric",
+              "leaders",
+              "drugs",
+              "coCXoRwfIFaq",
+              "divert"
+            ],
+            "deleted_text": "NCB has admitted in court no were recovered from Aryan. But there has to be a media trial still. How else to from BJPs colossal failures &amp its conduct against farmers SHAME WeStandWithAryanKhan httpst. COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.939405,
+            "probability_drop": -0.09085,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "recovered",
+              "How",
+              "barbaric",
+              "no",
+              "saying"
+            ],
+            "deleted_text": "NCB has admitted in court drugs were from Aryan. But there has to be a media trial still. else to divert from BJPs colossal failures &amp its leaders conduct against farmers SHAME WeStandWithAryanKhan httpst.coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB wants to know the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.924804,
+            "probability_drop": -0.076248,
+            "decreased": false
+          },
+          "random": {
+            "seed": 1382,
+            "deleted_text": "NCB admitted in court no drugs were recovered from Aryan. But has to be a media trial still. How else to divert from BJPs colossal failures &amp its leaders barbaric conduct against farmers SHAME WeStandWithAryanKhan .coCXoRwfIFaq COMMENT SalmanNizami_ If no drugs were found then why he is still in custody and whatever u r saying please provide proof of NCB statement. Peace out REPLY-COMMENT imabsahani SalmanNizami_ NCB to the origin of those drugs.",
+            "orig_prob": 0.848555,
+            "modified_prob": 0.895532,
+            "probability_drop": -0.046977,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 14,
+      "text": "Semmaya irukku bhaa trailer especialy paisa note song vera level",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 0,
+      "true_label_name": "Non-Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.996738,
+      "orig_prob_hate": 0.003262,
+      "shap_tokens": [
+        "Semmaya ",
+        "irukku ",
+        "bhaa ",
+        "trailer ",
+        "especialy ",
+        "paisa ",
+        "note ",
+        "song ",
+        "vera ",
+        "level"
+      ],
+      "shap_values_hof": [
+        -0.021488,
+        -0.002904,
+        0.007126,
+        -0.002683,
+        -0.011401,
+        0.012645,
+        -0.001892,
+        -0.004181,
+        0.005267,
+        -0.024211
+      ],
+      "lime_features": [
+        "level",
+        "vera",
+        "irukku",
+        "note",
+        "trailer",
+        "song",
+        "paisa",
+        "especialy",
+        "bhaa",
+        "Semmaya"
+      ],
+      "lime_weights": [
+        -0.008094,
+        0.003085,
+        0.002287,
+        0.002186,
+        0.001579,
+        0.001139,
+        0.001073,
+        -0.00081,
+        -0.000408,
+        -0.000118
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "level"
+            ],
+            "deleted_text": "Semmaya irukku bhaa trailer especialy paisa note song vera",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.959069,
+            "probability_drop": 0.037669,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "level"
+            ],
+            "deleted_text": "Semmaya irukku bhaa trailer especialy paisa note song vera",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.959069,
+            "probability_drop": 0.037669,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1478,
+            "deleted_text": "Semmaya irukku bhaa especialy paisa note song vera level",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.996108,
+            "probability_drop": 0.000631,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "level",
+              "Semmaya",
+              "paisa"
+            ],
+            "deleted_text": "irukku bhaa trailer especialy note song vera",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.847033,
+            "probability_drop": 0.149705,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "level",
+              "vera",
+              "irukku"
+            ],
+            "deleted_text": "Semmaya bhaa trailer especialy paisa note song",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.992029,
+            "probability_drop": 0.004709,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1480,
+            "deleted_text": "Semmaya irukku trailer especialy paisa note song",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.987523,
+            "probability_drop": 0.009215,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "level",
+              "Semmaya",
+              "paisa",
+              "especialy",
+              "bhaa"
+            ],
+            "deleted_text": "irukku trailer note song vera",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.353857,
+            "probability_drop": 0.642882,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "level",
+              "vera",
+              "irukku",
+              "note",
+              "trailer"
+            ],
+            "deleted_text": "Semmaya bhaa especialy paisa song",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.99752,
+            "probability_drop": -0.000781,
+            "decreased": false
+          },
+          "random": {
+            "seed": 1482,
+            "deleted_text": "irukku trailer especialy note level",
+            "orig_prob": 0.996738,
+            "modified_prob": 0.996387,
+            "probability_drop": 0.000351,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 15,
+      "text": "Marvel DC lam orama pongada!! Enga tamil cinemavuku nu oru HERO vanthachu",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.822831,
+      "orig_prob_hate": 0.822831,
+      "shap_tokens": [
+        "Marvel ",
+        "DC ",
+        "lam ",
+        "orama ",
+        "pongada!! ",
+        "Enga ",
+        "tamil ",
+        "cinemavuku ",
+        "nu ",
+        "oru ",
+        "HERO ",
+        "vanthachu"
+      ],
+      "shap_values_hof": [
+        0.02805,
+        0.06034,
+        0.113102,
+        0.004727,
+        0.47995,
+        0.069523,
+        -0.070524,
+        0.116891,
+        0.019846,
+        0.002392,
+        -0.145016,
+        0.096566
+      ],
+      "lime_features": [
+        "pongada",
+        "Marvel",
+        "vanthachu",
+        "nu",
+        "Enga",
+        "orama",
+        "tamil",
+        "HERO",
+        "lam",
+        "cinemavuku",
+        "oru",
+        "DC"
+      ],
+      "lime_weights": [
+        0.365312,
+        0.223127,
+        0.198092,
+        0.173964,
+        0.157159,
+        0.142117,
+        0.137938,
+        -0.082366,
+        0.059231,
+        0.049162,
+        0.045865,
+        0.006333
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "pongada!!"
+            ],
+            "deleted_text": "Marvel DC lam orama Enga tamil cinemavuku nu oru HERO vanthachu",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.176086,
+            "probability_drop": 0.646745,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "pongada"
+            ],
+            "deleted_text": "Marvel DC lam orama !! Enga tamil cinemavuku nu oru HERO vanthachu",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.401584,
+            "probability_drop": 0.421247,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1578,
+            "deleted_text": "Marvel DC lam orama pongada!! Enga tamil cinemavuku nu oru HERO",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.871639,
+            "probability_drop": -0.048808,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "pongada!!",
+              "HERO",
+              "cinemavuku"
+            ],
+            "deleted_text": "Marvel DC lam orama Enga tamil nu oru vanthachu",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.879194,
+            "probability_drop": -0.056363,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "pongada",
+              "Marvel",
+              "vanthachu"
+            ],
+            "deleted_text": "DC lam orama !! Enga tamil cinemavuku nu oru HERO",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.071101,
+            "probability_drop": 0.75173,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1580,
+            "deleted_text": "Marvel lam orama pongada!! tamil nu oru HERO vanthachu",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.644869,
+            "probability_drop": 0.177962,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "pongada!!",
+              "HERO",
+              "cinemavuku",
+              "lam",
+              "vanthachu"
+            ],
+            "deleted_text": "Marvel DC orama Enga tamil nu oru",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.742654,
+            "probability_drop": 0.080177,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "pongada",
+              "Marvel",
+              "vanthachu",
+              "nu",
+              "Enga"
+            ],
+            "deleted_text": "DC lam orama !! tamil cinemavuku oru HERO",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.027451,
+            "probability_drop": 0.79538,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1582,
+            "deleted_text": "Marvel lam orama !! Enga cinemavuku nu oru",
+            "orig_prob": 0.822831,
+            "modified_prob": 0.819851,
+            "probability_drop": 0.00298,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 16,
+      "text": "Ready to race viswasan vada padda vada Satta",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.91453,
+      "orig_prob_hate": 0.91453,
+      "shap_tokens": [
+        "Ready ",
+        "to ",
+        "race ",
+        "viswasan ",
+        "vada ",
+        "padda ",
+        "vada ",
+        "Satta"
+      ],
+      "shap_values_hof": [
+        -0.127099,
+        0.043821,
+        0.02723,
+        0.052109,
+        0.274013,
+        0.192874,
+        0.188714,
+        0.215883
+      ],
+      "lime_features": [
+        "padda",
+        "Satta",
+        "vada",
+        "viswasan",
+        "vada",
+        "to",
+        "race",
+        "Ready"
+      ],
+      "lime_weights": [
+        0.360843,
+        0.181493,
+        0.165112,
+        0.158177,
+        0.127844,
+        -0.045316,
+        0.040958,
+        -0.020873
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "vada"
+            ],
+            "deleted_text": "Ready to race viswasan padda vada Satta",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.899107,
+            "probability_drop": 0.015423,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "padda"
+            ],
+            "deleted_text": "Ready to race viswasan vada vada Satta",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.386288,
+            "probability_drop": 0.528242,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1678,
+            "deleted_text": "to race viswasan vada padda vada Satta",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.936328,
+            "probability_drop": -0.021799,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "vada",
+              "Satta",
+              "padda"
+            ],
+            "deleted_text": "Ready to race viswasan vada",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.235637,
+            "probability_drop": 0.678892,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "padda",
+              "Satta",
+              "vada"
+            ],
+            "deleted_text": "Ready to race viswasan vada",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.235637,
+            "probability_drop": 0.678892,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1680,
+            "deleted_text": "to viswasan vada padda vada",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.929192,
+            "probability_drop": -0.014662,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "vada",
+              "Satta",
+              "padda",
+              "vada",
+              "Ready"
+            ],
+            "deleted_text": "to race viswasan",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.661197,
+            "probability_drop": 0.253333,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "padda",
+              "Satta",
+              "vada",
+              "viswasan",
+              "vada"
+            ],
+            "deleted_text": "Ready to race",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.008962,
+            "probability_drop": 0.905568,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1682,
+            "deleted_text": "race vada vada",
+            "orig_prob": 0.91453,
+            "modified_prob": 0.018795,
+            "probability_drop": 0.895734,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 17,
+      "text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu mokka nu tu yennada upload aana udanae mokkanu podra trailer ah kuda mulusa paaka maatiya da venna....  Vj fans situation now rnga vaguru eriyuthu.....",
+      "language": "Tamil",
+      "dataset": "DravidianTamil",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.963518,
+      "orig_prob_hate": 0.963518,
+      "shap_tokens": [
+        "Oru ",
+        "sila ",
+        "vj ",
+        "fans ",
+        "ku ",
+        "vayiru ",
+        "eriyuthu ",
+        "summa ",
+        "vanthutu ",
+        "mokka ",
+        "nu ",
+        "tu ",
+        "yennada ",
+        "upload ",
+        "aana ",
+        "udanae ",
+        "mokkanu ",
+        "podra ",
+        "trailer ",
+        "ah ",
+        "kuda ",
+        "mulusa ",
+        "paaka ",
+        "maatiya ",
+        "da ",
+        "venna....  ",
+        "Vj ",
+        "fans ",
+        "situation ",
+        "now ",
+        "rnga ",
+        "vaguru ",
+        "eriyuthu"
+      ],
+      "shap_values_hof": [
+        -0.006458,
+        0.004477,
+        -0.003465,
+        0.007496,
+        0.025014,
+        0.029917,
+        -0.019818,
+        -0.034576,
+        0.079496,
+        0.166451,
+        -0.003404,
+        0.003704,
+        0.169185,
+        0.027284,
+        0.00786,
+        0.022926,
+        0.107891,
+        0.013214,
+        -0.016598,
+        0.022322,
+        0.072341,
+        0.009595,
+        -0.026583,
+        -0.012457,
+        0.031634,
+        -0.004972,
+        0.005854,
+        0.027543,
+        -0.015468,
+        0.014993,
+        0.051512,
+        0.105798,
+        0.058652
+      ],
+      "lime_features": [
+        "mokka",
+        "mokkanu",
+        "yennada",
+        "eriyuthu",
+        "now",
+        "mulusa",
+        "vj",
+        "tu",
+        "Vj",
+        "Oru",
+        "summa",
+        "situation",
+        "eriyuthu",
+        "udanae",
+        "da"
+      ],
+      "lime_weights": [
+        0.145854,
+        0.121912,
+        0.082501,
+        0.076614,
+        0.04588,
+        0.042977,
+        -0.042782,
+        -0.04045,
+        0.039486,
+        0.033142,
+        -0.029097,
+        0.022946,
+        -0.021692,
+        -0.015628,
+        -0.014132
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "yennada"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu mokka nu tu upload aana udanae mokkanu podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.963625,
+            "probability_drop": -0.000107,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "mokka"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu nu tu yennada upload aana udanae mokkanu podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.957881,
+            "probability_drop": 0.005637,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1778,
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu mokka nu tu yennada upload aana udanae mokkanu podra trailer ah kuda mulusa paaka maatiya da .... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.961267,
+            "probability_drop": 0.002251,
+            "decreased": true
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "yennada",
+              "mokka",
+              "mokkanu"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu nu tu upload aana udanae podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.905486,
+            "probability_drop": 0.058033,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "mokka",
+              "mokkanu",
+              "yennada"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa vanthutu nu tu upload aana udanae podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.905486,
+            "probability_drop": 0.058033,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1780,
+            "deleted_text": "Oru sila vj ku vayiru eriyuthu summa vanthutu mokka nu tu yenna upload aana mokkanu podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.965018,
+            "probability_drop": -0.0015,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "yennada",
+              "mokka",
+              "mokkanu",
+              "vaguru",
+              "vanthutu"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu summa nu tu upload aana udanae podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation now rnga eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.906858,
+            "probability_drop": 0.056661,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "mokka",
+              "mokkanu",
+              "yennada",
+              "eriyuthu",
+              "now"
+            ],
+            "deleted_text": "Oru sila vj fans ku vayiru summa vanthutu nu tu upload aana udanae podra trailer ah kuda mulusa paaka maatiya da venna.... Vj fans situation rnga vaguru eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.918915,
+            "probability_drop": 0.044604,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1782,
+            "deleted_text": "Oru sila vj fans ku vayiru eriyuthu vanthutu mokka nu tu yennada upload udanae mokkanu podra trailer kuda mulusa paaka maatiya da .... Vj fans situation now rnga eriyuthu.....",
+            "orig_prob": 0.963518,
+            "modified_prob": 0.96285,
+            "probability_drop": 0.000668,
+            "decreased": true
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 18,
+      "text": "ప్రభాస్ గారికి ఇంతటి చీప్ ఫ్యాన్స్ ఉన్నందుకు బాధపడుతున్నా",
+      "language": "Telugu",
+      "dataset": "HOLD",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 0,
+      "predicted_class_name": "Non-Hate",
+      "orig_prob_predicted_class": 0.893271,
+      "orig_prob_hate": 0.106729,
+      "shap_tokens": [
+        "ప్",
+        "రభా",
+        "స్ ",
+        "గా",
+        "రి",
+        "కి ",
+        "ఇం",
+        "తటి ",
+        "చీ",
+        "ప్ ",
+        "ఫ్",
+        "యా",
+        "న్",
+        "స్ ",
+        "ఉన్",
+        "నం",
+        "దు",
+        "కు ",
+        "బా",
+        "ధపడు",
+        "తు",
+        "న్",
+        "న"
+      ],
+      "shap_values_hof": [
+        -0.029556,
+        0.061567,
+        -0.079283,
+        -0.00527,
+        -0.049145,
+        0.081107,
+        -0.131848,
+        -0.04012,
+        0.103578,
+        0.073974,
+        0.073402,
+        0.075138,
+        -0.034477,
+        -0.033034,
+        -0.013226,
+        -0.094061,
+        0.045576,
+        -0.066021,
+        0.065933,
+        0.474123,
+        0.018376,
+        -0.013758,
+        -0.027384
+      ],
+      "lime_features": [
+        "ధపడ",
+        "ద",
+        "తట",
+        "య",
+        "ప",
+        "స",
+        "ర",
+        "రభ",
+        "క",
+        "బ",
+        "న",
+        "చ",
+        "ఫ",
+        "స",
+        "న"
+      ],
+      "lime_weights": [
+        0.260251,
+        -0.13105,
+        -0.120175,
+        0.102408,
+        0.101348,
+        0.082283,
+        0.076745,
+        0.075664,
+        -0.070407,
+        0.07017,
+        -0.066111,
+        0.063567,
+        -0.026361,
+        0.018772,
+        -0.012156
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "ధపడు"
+            ],
+            "deleted_text": "ప్రభాస్ గారికి ఇంతటి చీప్ ఫ్యాన్స్ ఉన్నందుకు బాతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.879697,
+            "probability_drop": 0.013574,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ధపడ"
+            ],
+            "deleted_text": "ప్రభాస్ గారికి ఇంతటి చీప్ ఫ్యాన్స్ ఉన్నందుకు బాుతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.863782,
+            "probability_drop": 0.029489,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1878,
+            "deleted_text": "ప్రభాస్ గారికి ఇంతటి చీప్ ఫ్యాన్స్ ఉన్నందుకు",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.949452,
+            "probability_drop": -0.056181,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "ధపడు",
+              "ఇం",
+              "చీ"
+            ],
+            "deleted_text": "ప్రభాస్ గారికి తటి ప్ ఫ్యాన్స్ ఉన్నందుకు బాతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.931883,
+            "probability_drop": -0.038611,
+            "decreased": false
+          },
+          "lime": {
+            "selected_features": [
+              "ధపడ",
+              "ద",
+              "తట"
+            ],
+            "deleted_text": "ప్రభాస్ గారికి ఇంి చీప్ ఫ్యాన్స్ ఉన్నంుకు బాుతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.073958,
+            "probability_drop": 0.819313,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1880,
+            "deleted_text": "గారికి ఇంతటి చీప్ ఉన్నందుకు",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.720909,
+            "probability_drop": 0.172362,
+            "decreased": true
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "ధపడు",
+              "ఇం",
+              "చీ",
+              "నం",
+              "కి"
+            ],
+            "deleted_text": "ప్రభాస్ గారి తటి ప్ ఫ్యాన్స్ ఉన్దుకు బాతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.698155,
+            "probability_drop": 0.195116,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "ధపడ",
+              "ద",
+              "తట",
+              "య",
+              "ప"
+            ],
+            "deleted_text": "్రభాస్ గారికి ఇంి చీప్ ఫ్ాన్స్ ఉన్నంుకు బాుతున్నా",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.104073,
+            "probability_drop": 0.789198,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1882,
+            "deleted_text": "ప్రభాస్ ఇంతటి",
+            "orig_prob": 0.893271,
+            "modified_prob": 0.993949,
+            "probability_drop": -0.100678,
+            "decreased": false
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": 19,
+      "text": "Ohh God Pawankhera sir said Rahul Kanwal a shameless man 🔥🔥🔥 on India Today  COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show.  REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the job using right words to Rahul Kamal now .",
+      "language": "Hindi",
+      "dataset": "HASOC2021",
+      "true_label": 1,
+      "true_label_name": "Hate",
+      "predicted_label": 1,
+      "predicted_class_name": "Hate",
+      "orig_prob_predicted_class": 0.782353,
+      "orig_prob_hate": 0.782353,
+      "shap_tokens": [
+        "Ohh ",
+        "God ",
+        "Pawankhera ",
+        "sir ",
+        "said ",
+        "Rahul ",
+        "Kanwal ",
+        "a ",
+        "shameless ",
+        "man 🔥🔥🔥 ",
+        "on ",
+        "India ",
+        "Today  ",
+        "COMMENT ",
+        "shalluchandla ",
+        "Pawankhera ",
+        "How ",
+        "wonderful ",
+        "Sorry ",
+        "I ",
+        "missed ",
+        "the ",
+        "show.  ",
+        "REPLY-",
+        "COMMENT ",
+        "mmvp2005 ",
+        "Pawankhera ",
+        "I ",
+        "guess ",
+        "pawan ",
+        "sir ",
+        "removed ",
+        "himself ",
+        "from ",
+        "the ",
+        "debate 🤣🤣. ",
+        "But ",
+        "he ",
+        "has ",
+        "done ",
+        "the ",
+        "job ",
+        "using ",
+        "right ",
+        "words ",
+        "to ",
+        "Rahul ",
+        "Kamal ",
+        "now"
+      ],
+      "shap_values_hof": [
+        0.008154,
+        0.006986,
+        0.005501,
+        0.005501,
+        0.012321,
+        0.013119,
+        -0.005215,
+        0.11942,
+        0.447887,
+        0.048221,
+        0.001592,
+        0.001592,
+        -0.006869,
+        -0.008142,
+        0.122129,
+        0.039778,
+        -0.023889,
+        -0.012846,
+        -0.030254,
+        -0.029181,
+        0.007617,
+        -0.000855,
+        0.000585,
+        0.000585,
+        0.000488,
+        0.000488,
+        0.000488,
+        0.000488,
+        0.002669,
+        0.002669,
+        0.002758,
+        0.002758,
+        0.00225,
+        0.00225,
+        0.007824,
+        0.022238,
+        -0.005908,
+        -0.005908,
+        -0.002965,
+        -0.002965,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191,
+        -0.000191
+      ],
+      "lime_features": [
+        "shameless",
+        "removed",
+        "done",
+        "I",
+        "the",
+        "the",
+        "said",
+        "Rahul",
+        "the",
+        "shalluchandla",
+        "Rahul",
+        "debate",
+        "show",
+        "I",
+        "Kanwal"
+      ],
+      "lime_weights": [
+        0.294613,
+        0.10135,
+        -0.071684,
+        -0.060925,
+        -0.056638,
+        -0.051709,
+        -0.047206,
+        -0.044958,
+        0.044732,
+        0.040808,
+        -0.029393,
+        0.026244,
+        -0.025924,
+        -0.020537,
+        -0.013899
+      ],
+      "deletion_results": [
+        {
+          "k": 1,
+          "shap": {
+            "selected_features": [
+              "shameless"
+            ],
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a man 🔥🔥🔥 on India Today COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.119736,
+            "probability_drop": 0.662617,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "shameless"
+            ],
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a man 🔥🔥🔥 on India Today COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.119736,
+            "probability_drop": 0.662617,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1978,
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a shameless man 🔥🔥🔥 on India Today COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.785286,
+            "probability_drop": -0.002934,
+            "decreased": false
+          }
+        },
+        {
+          "k": 3,
+          "shap": {
+            "selected_features": [
+              "shameless",
+              "shalluchandla",
+              "a"
+            ],
+            "deleted_text": "Ohh God Pwankhera sir said Rahul Kanwal a man 🔥🔥🔥 on India Today COMMENT Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.090546,
+            "probability_drop": 0.691807,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "shameless",
+              "removed",
+              "done"
+            ],
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a man 🔥🔥🔥 on India Today COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir himself from the debate 🤣🤣. But he has the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.128619,
+            "probability_drop": 0.653734,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1980,
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a shameless man 🔥🔥🔥 India COMMENT shalluchandla Pawankhera How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.885709,
+            "probability_drop": -0.103357,
+            "decreased": false
+          }
+        },
+        {
+          "k": 5,
+          "shap": {
+            "selected_features": [
+              "shameless",
+              "shalluchandla",
+              "a",
+              "man 🔥🔥🔥",
+              "Pawankhera"
+            ],
+            "deleted_text": "Ohh God Pwankhera sir said Rahul Kanwal a on India Today COMMENT How wonderful Sorry I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the debate 🤣🤣. But he has done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.114437,
+            "probability_drop": 0.667915,
+            "decreased": true
+          },
+          "lime": {
+            "selected_features": [
+              "shameless",
+              "removed",
+              "done",
+              "I",
+              "the"
+            ],
+            "deleted_text": "Ohh God Pawankhera sir said Rahul Kanwal a man 🔥🔥🔥 on ndia Today COMMENT shalluchandla Pawankhera How wonderful Sorry I missed show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir himself from the debate 🤣🤣. But he has the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.146166,
+            "probability_drop": 0.636186,
+            "decreased": true
+          },
+          "random": {
+            "seed": 1982,
+            "deleted_text": "Ohh Pwankhera sir said Rahul Kanwal a shameless man 🔥🔥🔥 on India Today COMMENT shalluchandla Pawankhera How wonderful I missed the show. REPLY-COMMENT mmvp2005 Pawankhera I guess pawan sir removed himself from the 🤣🤣. he has done the job using right words to Rahul Kamal now .",
+            "orig_prob": 0.782353,
+            "modified_prob": 0.780123,
+            "probability_drop": 0.002229,
+            "decreased": true
+          }
+        }
+      ]
+    }
+  ]
+}
